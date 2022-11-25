@@ -14,4 +14,10 @@ public class ColourTest {
         Colour green = new Colour(0.0, 0.5, 0.0);
         assertEquals(green.g, 0.5, 0.0);
     }
+
+    @Test
+    public void colourBlueParameterTest(){
+        Colour blue = new Colour(0.0, 0.0, 1.0);
+        assertEquals(blue.b, 1.0, 0.0);
+    }
 }
