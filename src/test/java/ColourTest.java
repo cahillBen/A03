@@ -29,5 +29,8 @@ public class ColourTest {
         assertThrows(IllegalArgumentException.class, () -> new Colour(1.5, 0.0, 0.0));
     }
 
-
+    @Test
+    public void colourGreenParameterInRange(){
+        assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, 2.0, 0.0));
+    }
 }
