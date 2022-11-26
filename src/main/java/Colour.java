@@ -17,4 +17,10 @@ public class Colour {
         this.g = g * 255;
         this.b = b * 255;
     }
+
+    public Colour(int[] rgb){
+        this.r = (int) rgb[0];
+        this.g = (int) rgb[1];
+        this.b = (int) rgb[2];
+    }
 }

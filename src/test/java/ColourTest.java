@@ -39,9 +39,10 @@ public class ColourTest {
 
     @Test
     public void colourBinaryParameter(){
-        Colour white = new Colour([0b11111111, 0b11111111, 0b11111111]);
-        assertEquals(white.r, 255, 0.0);
-        assertEquals(white.g, 255, 0.0);
-        assertEquals(white.b, 255, 0.0);
+        int[] array = new int[] {0b11111111, 0b11111111, 0b11111111};
+        Colour white = new Colour(array);
+        assertEquals(255, white.r, 0.0);
+        assertEquals(255, white.g, 0.0);
+        assertEquals(255, white.b, 0.0);
     }
 }
