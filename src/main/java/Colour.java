@@ -10,6 +10,9 @@ public class Colour {
         if (g < 0 || g > 1) {
             throw new IllegalArgumentException("'g' input is out of range");
         }
+        if (b < 0 || b > 1) {
+            throw new IllegalArgumentException("'b' input is out of range");
+        }
         this.r = r;
         this.g = g;
         this.b = b;
