@@ -4,6 +4,9 @@ public class Colour {
     double g;
     double b;
     public Colour(double r, double g, double b){
+        if (r < 0 || r > 1) {
+            throw new IllegalArgumentException("'r' input is out of range");
+        }
         this.r = r;
         this.g = g;
         this.b = b;
