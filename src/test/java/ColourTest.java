@@ -36,4 +36,12 @@ public class ColourTest {
     public void colourBlueParameterInRange(){
         assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, 0.0, 100.0));
     }
+
+    @Test
+    public void colourBinaryParameter(){
+        Colour white = new Colour([0b11111111, 0b11111111, 0b11111111]);
+        assertEquals(white.r, 255, 0.0);
+        assertEquals(white.g, 255, 0.0);
+        assertEquals(white.b, 255, 0.0);
+    }
 }
