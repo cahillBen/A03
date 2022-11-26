@@ -2,6 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
 
 public class ColourTest {
     @Test
@@ -44,5 +45,12 @@ public class ColourTest {
         assertEquals(255, white.r, 0.0);
         assertEquals(255, white.g, 0.0);
         assertEquals(255, white.b, 0.0);
+    }
+
+    @Test
+    public void colourEquals(){
+        Colour red1 = new Colour(1.0, 0.0, 0.0);
+        Colour red2 = new Colour(1.0, 0.0, 0.0);
+        assertTrue(red1.equals(red2));
     }
 }
