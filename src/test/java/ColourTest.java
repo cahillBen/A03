@@ -1,6 +1,4 @@
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
@@ -32,5 +30,10 @@ public class ColourTest {
     @Test
     public void colourGreenParameterInRange(){
         assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, 2.0, 0.0));
+    }
+
+    @Test
+    public void colourBlueParameterInRange(){
+        assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, 0.0, 100.0));
     }
 }
