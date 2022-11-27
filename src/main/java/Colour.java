@@ -19,8 +19,16 @@ public class Colour {
     }
 
     public Colour(int[] rgb){
-        this.r = (int) rgb[0];
-        this.g = (int) rgb[1];
-        this.b = (int) rgb[2];
+        this.r = rgb[0];
+        this.g = rgb[1];
+        this.b = rgb[2];
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Colour colour = (Colour) o;
+        return Double.compare(colour.r, r) == 0 && Double.compare(colour.g, g) == 0 && Double.compare(colour.b, b) == 0;
     }
 }
