@@ -1,8 +1,8 @@
 public class Colour {
 
-    double r;
-    double g;
-    double b;
+    private final double r;
+    private final double g;
+    private final double b;
     public Colour(double r, double g, double b){
         if (r < 0 || r > 1) {
             throw new IllegalArgumentException("'r' input is out of range");
@@ -30,5 +30,17 @@ public class Colour {
         if (o == null || getClass() != o.getClass()) return false;
         Colour colour = (Colour) o;
         return Double.compare(colour.r, r) == 0 && Double.compare(colour.g, g) == 0 && Double.compare(colour.b, b) == 0;
+    }
+
+    public double getR() {
+        return r;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getG() {
+        return g;
     }
 }
