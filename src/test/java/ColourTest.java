@@ -50,7 +50,8 @@ public class ColourTest {
     @Test
     public void colourEquals(){
         Colour red1 = new Colour(1.0, 0.0, 0.0);
-        Colour red2 = new Colour(1.0, 0.0, 0.0);
+        int[] array = new int[] {0b11111111, 0b00000000, 0b00000000};
+        Colour red2 = new Colour(array);
         boolean ans = red1.equals(red2);
         assertTrue(ans);
     }
