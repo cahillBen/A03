@@ -3,6 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class ColourTest {
     @Test
@@ -30,7 +31,7 @@ public class ColourTest {
 
     @Test
     public void colourGreenParameterInRange(){
-        assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, 2.0, 0.0));
+        assertThrows(IllegalArgumentException.class, () -> new Colour(0.0, -2.0, 0.0));
     }
 
     @Test
@@ -48,11 +49,15 @@ public class ColourTest {
     }
 
     @Test
-    public void colourEquals(){
+    public void colourEquals() {
         Colour red1 = new Colour(1.0, 0.0, 0.0);
-        int[] array = new int[] {0b11111111, 0b00000000, 0b00000000};
+        int[] array = new int[]{0b11111111, 0b00000000, 0b00000000};
         Colour red2 = new Colour(array);
         boolean ans = red1.equals(red2);
         assertTrue(ans);
+
+        Colour black = new Colour(0.0, 0.0, 0.0);
+        ans = red1.equals(black);
+        assertFalse(ans);
     }
 }
